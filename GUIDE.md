@@ -225,6 +225,58 @@ Send("{Up down}")  ; Hold Up arrow key
 
 ---
 
+### Changing the Auto Jump Key
+
+By default, Auto Jump presses and releases the `Space` key. To change it, find:
+
+```ahk
+DoJump() {
+    Send("{Space down}")
+    Sleep(50)
+    Send("{Space up}")
+}
+```
+
+Replace `{Space}` with any key:
+
+```ahk
+Send("{z down}")     ; Press Z instead
+Send("{Up down}")    ; Press Up arrow
+Send("{LShift down}") ; Press Left Shift
+```
+
+---
+
+### Changing the Jump Interval Default
+
+Find this line near the top:
+
+```ahk
+global jumpMs := 600
+```
+
+Change `600` to any value between 100 and 2000 (milliseconds between jumps).
+
+---
+
+### Changing the Auto Jump Hotkey
+
+At the bottom of the script:
+
+```ahk
+F8::ToggleJump()
+```
+
+Replace `F8` with any key:
+
+```ahk
+F3::ToggleJump()     ; Use F3 instead
+^space::ToggleJump() ; Ctrl + Space
+!j::ToggleJump()     ; Alt + J
+```
+
+---
+
 ### Changing the Auto Walk Hotkey
 
 At the bottom of the script:
