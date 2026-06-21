@@ -1,6 +1,6 @@
 #  AutoClicker by elusive-otter
 
-An AutoHotkey v2 autoclicker with a clean GUI, adjustable speed, mouse button selection, and global hotkeys. Don't use it to cheat! ;)
+An AutoHotkey v2 autoclicker with a clean GUI, adjustable speed, mouse button selection, auto walk, and global hotkeys.
 
 ---
 
@@ -18,6 +18,7 @@ An AutoHotkey v2 autoclicker with a clean GUI, adjustable speed, mouse button se
 | `autoclicker.ahk` | The main script — run this |
 | `README.md` | This file |
 | `GUIDE.md` | Full usage, editing, and AHK basics guide |
+| `LICENSE` | MIT License |
 
 ---
 
@@ -34,7 +35,8 @@ An AutoHotkey v2 autoclicker with a clean GUI, adjustable speed, mouse button se
 
 | Key | Action |
 |-----|--------|
-| `F6` | Toggle clicking on / off |
+| `F6` | Toggle autoclicker on / off |
+| `F7` | Toggle auto walk on / off |
 | `F8` | Quit the script entirely |
 
 ---
@@ -47,16 +49,18 @@ An AutoHotkey v2 autoclicker with a clean GUI, adjustable speed, mouse button se
 | Slider | Drag to adjust speed visually |
 | Left / Right / Middle | Which mouse button to click |
 | Single / Double | Click once or twice per interval |
-| Start / Stop | Toggle the clicker |
+| Start Walk | Holds the W key continuously for auto walking |
+| Start / Stop | Toggle the autoclicker |
 | Quit | Close the script |
 
 ---
 
 ## Notes
 
-- The clicker clicks at your **current cursor position** — move your mouse to where you want clicks to land before starting
-- Lower ms = faster clicking (1ms = 1000 clicks/sec theoretically, limited by your system)
-- The window stays **always on top** so you can adjust it while using other apps
+- The clicker clicks at your **current cursor position**
+- Auto Walk holds the `W` key down — works in most games and apps that use W to move forward
+- Lower ms = faster clicking
+- The window stays **always on top** so you can adjust while using other apps
 
 ---
 
