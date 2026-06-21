@@ -195,6 +195,54 @@ myGui := Gui("", "AutoClicker")
 
 ---
 
+### Changing the Auto Walk Key
+
+By default, Auto Walk holds the `W` key. To change it to a different key, find this section near the bottom:
+
+```ahk
+ToggleWalk(*) {
+    global isWalking
+    isWalking := !isWalking
+    if isWalking {
+        walkLabel.Text := "WALKING"
+        btnWalk.Text   := "Stop Walk   [F7]"
+        Send("{w down}")
+    } else {
+        walkLabel.Text := "STOPPED"
+        btnWalk.Text   := "Start Walk  [F7]"
+        Send("{w up}")
+    }
+}
+```
+
+Replace `{w down}` and `{w up}` with any key. Examples:
+
+```ahk
+Send("{a down}")   ; Hold A instead
+Send("{Space down}") ; Hold Spacebar
+Send("{Up down}")  ; Hold Up arrow key
+```
+
+---
+
+### Changing the Auto Walk Hotkey
+
+At the bottom of the script:
+
+```ahk
+F7::ToggleWalk()
+```
+
+Replace `F7` with any key you prefer:
+
+```ahk
+F2::ToggleWalk()     ; Use F2 instead
+^w::ToggleWalk()     ; Ctrl + W
+!w::ToggleWalk()     ; Alt + W
+```
+
+---
+
 ### Adding a Click Limit
 
 To make the clicker stop after a set number of clicks, add a counter. Find the `DoClick()` function:
