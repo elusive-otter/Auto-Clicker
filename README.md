@@ -1,6 +1,6 @@
 #  AutoClicker by elusive-otter
 
-An AutoHotkey v2 autoclicker with a clean GUI, adjustable speed, mouse button selection, auto walk, and global hotkeys.
+An AutoHotkey v2 autoclicker with a clean GUI, adjustable speed, mouse button selection, auto walk, auto jump, and global hotkeys.
 
 ---
 
@@ -37,7 +37,8 @@ An AutoHotkey v2 autoclicker with a clean GUI, adjustable speed, mouse button se
 |-----|--------|
 | `F6` | Toggle autoclicker on / off |
 | `F7` | Toggle auto walk on / off |
-| `F8` | Quit the script entirely |
+| `F8` | Toggle auto jump on / off |
+| `F9` | Quit the script entirely |
 
 ---
 
@@ -45,22 +46,37 @@ An AutoHotkey v2 autoclicker with a clean GUI, adjustable speed, mouse button se
 
 | Control | What it does |
 |---------|--------------|
-| Interval (ms) | Time between clicks in milliseconds |
-| Slider | Drag to adjust speed visually |
+| Click Interval (ms) | Time between clicks in milliseconds |
+| Slider | Drag to adjust click speed visually |
 | Left / Right / Middle | Which mouse button to click |
 | Single / Double | Click once or twice per interval |
 | Start Walk | Holds the W key continuously for auto walking |
+| Jump Interval (ms) | How often the Space key is pressed |
+| Start Jump | Repeatedly presses Space for auto jumping |
 | Start / Stop | Toggle the autoclicker |
 | Quit | Close the script |
+
+---
+
+## Status Indicators
+
+The top of the GUI shows live status for all three features:
+
+```
+CLICK  OFF     WALK  OFF     JUMP  OFF
+```
+
+Each switches to **ON** when active.
 
 ---
 
 ## Notes
 
 - The clicker clicks at your **current cursor position**
-- Auto Walk holds the `W` key down — works in most games and apps that use W to move forward
-- Lower ms = faster clicking
+- Auto Walk holds `W` — works in most games that use W to move forward
+- Auto Jump presses and releases `Space` on a timer — adjustable from 100ms to 2000ms
 - The window stays **always on top** so you can adjust while using other apps
+- Quit is now **F9** (moved from F8 to make room for auto jump)
 
 ---
 
